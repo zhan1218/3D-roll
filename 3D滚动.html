@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      ul{
+          -w
+      }
+    </style>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            list-style: none;
+        }
+
+        body:hover ul {
+            transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        }
+        ul {
+            width: 200px;
+            height: 200px;
+            /*border: 1px solid red;*/
+            margin: 100px auto;
+            position: relative;
+
+            /*perspective: 1000px;*/
+            transform-style: preserve-3d;
+
+            transition: all 8s;
+        }
+
+        ul li {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: .5;
+
+            font-size: 150px;
+            line-height: 200px;
+            text-align: center;
+            color: #fff;
+
+            backface-visibility: hidden;
+
+        }
+        /*正面*/
+        li:nth-child(1){
+            transform: translateZ(100px);
+            background-color: red;
+        }
+        
+
+        /*上面*/
+        li:nth-child(2){
+            transform: rotateX(90deg) translateZ(100px);
+            background-color: blue;
+
+        }
+        
+        /*后面*/
+        li:nth-child(3){
+            transform: rotateX(180deg) translateZ(100px);
+            background-color: pink;
+        }
+
+        /*下面*/
+        li:nth-child(4){
+            transform: rotateX(270deg) translateZ(100px);
+            background-color: green;
+        }
+        
+        /*左边*/
+        li:nth-child(5){
+            transform: rotateY(-90deg) translateZ(100px);
+            background-color: skyblue;
+        }
+        
+        
+        /*右边*/
+        li:nth-child(6){
+            transform: rotateY(90deg) translateZ(100px);
+            background-color: mediumvioletred;
+
+        }
+    </style>
+
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+</body>
+</html>
